@@ -1,0 +1,88 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: SamplePortalClient.EPAgentWS.UDDisposition
+// Assembly: SamplePortalClient, Version=1.0.9337.19967, Culture=neutral, PublicKeyToken=null
+// MVID: 1D923F2E-5C60-41E8-9709-AD761823608D
+// Assembly location: C:\data\SamplePortalClient.dll
+
+using System;
+using System.CodeDom.Compiler;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Xml.Serialization;
+
+namespace SamplePortalClient.EPAgentWS
+{
+  [GeneratedCode("System.Xml", "4.8.4084.0")]
+  [DebuggerStepThrough]
+  [DesignerCategory("code")]
+  [SoapType(Namespace = "http://Client.AgentService.UD.concerto.com")]
+  [Serializable]
+  public class UDDisposition
+  {
+    private int iDispositionField;
+    private int iTypeField;
+    private string sDispositionField;
+    private bool callBackFlagField;
+    private int callIdField;
+    private int nextCallIdField;
+    private bool saleFlagField;
+    private UDCallInfoUserDefinedIn updatedCallInfoUserDefinedField;
+    private bool wrapRequiredFlagField;
+
+    public int IDisposition
+    {
+      get => this.iDispositionField;
+      set => this.iDispositionField = value;
+    }
+
+    public int IType
+    {
+      get => this.iTypeField;
+      set => this.iTypeField = value;
+    }
+
+    [SoapElement(IsNullable = true)]
+    public string SDisposition
+    {
+      get => this.sDispositionField;
+      set => this.sDispositionField = value;
+    }
+
+    public bool callBackFlag
+    {
+      get => this.callBackFlagField;
+      set => this.callBackFlagField = value;
+    }
+
+    public int callId
+    {
+      get => this.callIdField;
+      set => this.callIdField = value;
+    }
+
+    public int nextCallId
+    {
+      get => this.nextCallIdField;
+      set => this.nextCallIdField = value;
+    }
+
+    public bool saleFlag
+    {
+      get => this.saleFlagField;
+      set => this.saleFlagField = value;
+    }
+
+    [SoapElement(IsNullable = true)]
+    public UDCallInfoUserDefinedIn updatedCallInfoUserDefined
+    {
+      get => this.updatedCallInfoUserDefinedField;
+      set => this.updatedCallInfoUserDefinedField = value;
+    }
+
+    public bool wrapRequiredFlag
+    {
+      get => this.wrapRequiredFlagField;
+      set => this.wrapRequiredFlagField = value;
+    }
+  }
+}

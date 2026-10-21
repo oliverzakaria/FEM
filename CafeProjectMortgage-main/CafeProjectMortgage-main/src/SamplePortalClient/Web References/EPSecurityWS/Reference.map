@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://core2019.aspect.co.id:8443/ConcertoSecurityPortal/services/SecurityPortalExt?wsdl" filename="SecurityPortalExt.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

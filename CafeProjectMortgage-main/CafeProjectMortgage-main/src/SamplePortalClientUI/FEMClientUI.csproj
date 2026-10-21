@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AAFD222-7854-49FF-B6FF-EC88DDF5C36D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>FEM %282%29.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>FEMClientUI</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SamplePortalClientUI</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>SamplePortalClient.UI.Program</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9531E6CE3421062C80214095002C54EE6AC00319</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FEMClientUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MakarovDev.ExpandCollapsePanel, Version=1.0.7197.27666, Culture=neutral, PublicKeyToken=6cb45db4006534c2, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MakarovDev.ExpandCollapsePanel.1.0.0\lib\net40\MakarovDev.ExpandCollapsePanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="PopupControl, Version=1.5.0.37336, Culture=neutral, PublicKeyToken=04c10344d6495b18, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PortalLoadBalancer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\NP\LatestTobeUsed\PortalLoadBalancer.Net.3\PortalLoadBalancer\obj\Release\PortalLoadBalancer.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ServiceStack, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.8.8.0\lib\net472\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Client, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Client.8.8.0\lib\net472\ServiceStack.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Common.8.8.0\lib\net472\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Interfaces.8.8.0\lib\net472\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=6.0.0.0, Culture=neutral, PublicKeyToken=02c12cbda47e6587, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ServiceStack.Text.8.8.0\lib\net472\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Buffers.4.6.0\lib\net462\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Memory, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Memory.4.6.0\lib\net462\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Numerics.Vectors.4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\WPFToolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgentInfo.Designer.cs">
+      <DependentUpon>AgentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\Extensions.cs" />
+    <Compile Include="FNumDial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceClient.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="F3Way.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F3Way.Designer.cs">
+      <DependentUpon>F3Way.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FCallData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FCallData.designer.cs">
+      <DependentUpon>FCallData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FChat.Designer.cs">
+      <DependentUpon>FChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FDial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FToolbar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ICallDataWindow.cs" />
+    <Compile Include="iniFile.cs" />
+    <Compile Include="libs\CustomePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="libs\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="libs\GradientPanel.designer.cs">
+      <DependentUpon>GradientPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="libs\MultiColumnComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RowAgentStats.cs" />
+    <Compile Include="ServiceModel.cs" />
+    <Compile Include="Spinner.cs" />
+    <Compile Include="UserTimeZones.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="FEM %282%29.ico" />
+    <Content Include="libs\MakarovDev.ExpandCollapsePanel.dll" />
+    <Content Include="libs\PopupControl.dll" />
+    <Content Include="libs\PortalLoadBalancer.dll" />
+    <Content Include="libs\SamplePortalClient.dll" />
+    <Content Include="libs\WPFToolkit.dll" />
+    <None Include="Resources\numpad_disable.png" />
+    <None Include="Resources\numpad.png" />
+    <None Include="Resources\kres.png" />
+    <None Include="Resources\0.png" />
+    <None Include="Resources\asterik.png" />
+    <None Include="Resources\9.png" />
+    <None Include="Resources\8.png" />
+    <None Include="Resources\7.png" />
+    <None Include="Resources\6.png" />
+    <None Include="Resources\5.png" />
+    <None Include="Resources\4.png" />
+    <None Include="Resources\3.png" />
+    <None Include="Resources\2.png" />
+    <None Include="Resources\1.png" />
+    <None Include="Resources\bintang.png" />
+    <None Include="packages.config" />
+    <None Include="Resources\danamon.png" />
+    <None Include="Resources\FEM %281%29.ico" />
+    <None Include="FEMClientUI_TemporaryKey.pfx" />
+    <None Include="Resources\agent_stat.png" />
+    <None Include="Resources\header_dial.png" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\header_middle.png" />
+    <None Include="Resources\menu.png" />
+    <None Include="Resources\header_left.png" />
+    <None Include="Resources\active.PNG" />
+    <None Include="Resources\dialing.png" />
+    <None Include="Resources\preview.png" />
+    <None Include="Resources\hold.png" />
+    <None Include="Resources\wrap.png" />
+    <None Include="inisetting.ini" />
+    <None Include="Resources\transfer-btn_notext_small_reversed_disable.png" />
+    <None Include="Resources\release-btn_notext_small_reversed_disable.png" />
+    <None Include="Resources\record-btn_notext_small_reversed-disable.png" />
+    <None Include="Resources\hold-btn_notext_small_reversed_disable.png" />
+    <None Include="Resources\redalertphoneup.png" />
+    <None Include="Resources\redalertphonedown.png" />
+    <None Include="Resources\notsignedin.png" />
+    <None Include="Resources\bluephoneup.png" />
+    <None Include="Resources\bluephonedown.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\transfer-btn_notext_small_reversed.png" />
+    <None Include="Resources\transfer-btn.png" />
+    <None Include="Resources\retrieve-btn_notext_small_reversed.png" />
+    <None Include="Resources\retrieve-btn.png" />
+    <None Include="Resources\release-btn_notext_small_reversed.png" />
+    <None Include="Resources\release-btn.png" />
+    <None Include="Resources\record-btn_notext_small_reversed.png" />
+    <None Include="Resources\record-btn.png" />
+    <None Include="Resources\im-btn_notext_small_reversed.png" />
+    <None Include="Resources\im-btn.png" />
+    <None Include="Resources\hold-btn_notext_small_reversed.png" />
+    <None Include="Resources\hold-btn.png" />
+    <None Include="Resources\dial-btn_notext_small_reversed.png" />
+    <None Include="Resources\dial-btn.png" />
+    <None Include="Resources\contacts-btn_notext_small_reversed.png" />
+    <None Include="Resources\contacts-btn.png" />
+    <None Include="Resources\conference-btn_notext_small_reversed.png" />
+    <None Include="Resources\conference-btn.png" />
+    <None Include="Resources\arrowf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cafe.Mortgage.Api.ServiceModel\Cafe.Mortgage.Api.ServiceModel.csproj">
+      <Project>{08bef328-ab7d-48d3-800d-48acc75c7914}</Project>
+      <Name>Cafe.Mortgage.Api.ServiceModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Notification-Popup-Window-master\Tulpep.NotificationWindow\Tulpep.NotificationWindow.csproj">
+      <Project>{605006eb-d4e6-4312-a293-3a43fac43240}</Project>
+      <Name>Tulpep.NotificationWindow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SamplePortalClient\SamplePortalClient.csproj">
+      <Project>{6b7b6562-1b09-4ef3-9ffd-4fe5d7098949}</Project>
+      <Name>SamplePortalClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AgentInfo.resx">
+      <DependentUpon>AgentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F3Way.resx">
+      <DependentUpon>F3Way.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FCallData.resx">
+      <DependentUpon>FCallData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FChat.resx">
+      <DependentUpon>FChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FNumDial.resx">
+      <DependentUpon>FNumDial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FDial.resx">
+      <DependentUpon>FDial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FList.resx">
+      <DependentUpon>FList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FMessage.resx">
+      <DependentUpon>FMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FToolbar.resx">
+      <DependentUpon>FToolbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="libs\GradientPanel.resx">
+      <DependentUpon>GradientPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

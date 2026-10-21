@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11723.231 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Mortgage.Api.ServiceModel", "src\Cafe.Mortgage.Api.ServiceModel\Cafe.Mortgage.Api.ServiceModel.csproj", "{08BEF328-AB7D-48D3-800D-48ACC75C7914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Mortgage.Api.ServiceInterface", "src\Cafe.Mortgage.Api.ServiceInterface\Cafe.Mortgage.Api.ServiceInterface.csproj", "{582DFB0F-F84D-4E43-9BCA-2A5A86600B7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Mortgage.Api", "src\Cafe.Mortgage.Api\Cafe.Mortgage.Api.csproj", "{4389B305-B381-4B50-B1A8-BBB5259A0524}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplePortalClient", "src\SamplePortalClient\SamplePortalClient.csproj", "{6B7B6562-1B09-4EF3-9FFD-4FE5D7098949}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FEMClientUI", "src\SamplePortalClientUI\FEMClientUI.csproj", "{1AAFD222-7854-49FF-B6FF-EC88DDF5C36D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tulpep.NotificationWindow", "src\Notification-Popup-Window-master\Tulpep.NotificationWindow\Tulpep.NotificationWindow.csproj", "{605006EB-D4E6-4312-A293-3A43FAC43240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cafe.Tools", "src\Cafe.Tools\Cafe.Tools.csproj", "{D6713FBB-594A-4A0D-8F2E-AAACFC79CB67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08BEF328-AB7D-48D3-800D-48ACC75C7914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BEF328-AB7D-48D3-800D-48ACC75C7914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BEF328-AB7D-48D3-800D-48ACC75C7914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BEF328-AB7D-48D3-800D-48ACC75C7914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582DFB0F-F84D-4E43-9BCA-2A5A86600B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582DFB0F-F84D-4E43-9BCA-2A5A86600B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582DFB0F-F84D-4E43-9BCA-2A5A86600B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582DFB0F-F84D-4E43-9BCA-2A5A86600B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4389B305-B381-4B50-B1A8-BBB5259A0524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4389B305-B381-4B50-B1A8-BBB5259A0524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4389B305-B381-4B50-B1A8-BBB5259A0524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4389B305-B381-4B50-B1A8-BBB5259A0524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B7B6562-1B09-4EF3-9FFD-4FE5D7098949}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B7B6562-1B09-4EF3-9FFD-4FE5D7098949}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B7B6562-1B09-4EF3-9FFD-4FE5D7098949}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B7B6562-1B09-4EF3-9FFD-4FE5D7098949}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AAFD222-7854-49FF-B6FF-EC88DDF5C36D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AAFD222-7854-49FF-B6FF-EC88DDF5C36D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AAFD222-7854-49FF-B6FF-EC88DDF5C36D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AAFD222-7854-49FF-B6FF-EC88DDF5C36D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{605006EB-D4E6-4312-A293-3A43FAC43240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6713FBB-594A-4A0D-8F2E-AAACFC79CB67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6713FBB-594A-4A0D-8F2E-AAACFC79CB67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6713FBB-594A-4A0D-8F2E-AAACFC79CB67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6713FBB-594A-4A0D-8F2E-AAACFC79CB67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {576CA1C3-A70D-4BC0-91AA-4DC61BEDB76B}
+	EndGlobalSection
+EndGlobal

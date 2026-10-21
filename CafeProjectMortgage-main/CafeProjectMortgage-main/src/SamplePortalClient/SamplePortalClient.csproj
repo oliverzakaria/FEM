@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B7B6562-1B09-4EF3-9FFD-4FE5D7098949}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SamplePortalClient</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SamplePortalClient</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Web References\EPSecurityWS\Reference.cs" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EPAgentWSP\Agent.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\AgentKWUserInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\AgentSetting.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\AgentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\AgentXfer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Attachemnts.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CallBackService.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CallDataDef1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CallDataDefFields.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CallLogger.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CallLoggerMode.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CallLoggerType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CallTableExclusion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CcproSettings.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\CentercordCSL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DirectorXfer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DispAEDQueDropDown.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DispAEDQueue.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DispEmailAccount.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Disposition.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DispositionPlan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Dispositions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DispServer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DispSite.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DistributionImportStatus.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\DSTHistory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Email.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\EmailProtocol.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\EmailSubject.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\External.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ExternalReportConfig.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Externals.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ExtractData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\FilterSql.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\GetIdDesc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\IPNIQNodeDetail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\IPNIQNodeInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBAnswer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBase.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBCatalog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBCategories.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBCategory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBQuestion.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBServer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KBUrl.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\KWSkill.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\LoggedInUsers.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\LoggedInUsersIM.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Mailbox.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Map.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\MediaRecordings.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Message.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\MonitorClass.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\NLPCategory.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\NLPResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\OCSConfig.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\PersonalGreeting.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ProvisionService.wsdl" />
+    <None Include="Web References\EPAgentWSP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\EPAgentWSP\SecurityPlan.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Server.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ServerFQDN.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ServerSettings.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Service.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ServiceEmailQueues.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ServiceGroup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ServiceSettings1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ServiceVoiceMail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ServiceXfer.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Skill.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\StatusReasons.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\Table.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\TimeZone.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\UIPDeploymentType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\URL.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\User.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\UserLocale.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\UserVoiceMail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\ViewData.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPAgentWSP\VoiceMail.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPEventsWS\AgentEvent.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPEventsWS\AlertEvent.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\EPEventsWS\EventService.wsdl" />
+    <None Include="Web References\EPEventsWS\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="App.ico" />
+    <Compile Include="AgentSession.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CAgentStatistics.cs" />
+    <Compile Include="CApp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CCallManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEventManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CHandlerRemoveService.cs" />
+    <Compile Include="CHandlerUpdateService.cs" />
+    <Compile Include="CList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common.cs" />
+    <Compile Include="CParkReason.cs" />
+    <Compile Include="CParkReasons.cs" />
+    <Compile Include="CPortal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CRecording.cs" />
+    <Compile Include="CSpeedDial.cs" />
+    <Compile Include="EPAgentWS\Agent.cs" />
+    <Compile Include="EPAgentWS\AgentKWUserInfo.cs" />
+    <Compile Include="EPAgentWS\AgentPortalException.cs" />
+    <Compile Include="EPAgentWS\AgentSetting.cs" />
+    <Compile Include="EPAgentWS\AgentType.cs" />
+    <Compile Include="EPAgentWS\AgentWebServiceService.cs" />
+    <Compile Include="EPAgentWS\AgentXfer.cs" />
+    <Compile Include="EPAgentWS\answerCallCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Attachemnts.cs" />
+    <Compile Include="EPAgentWS\authenticateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\availableCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\BarcodeMode.cs" />
+    <Compile Include="EPAgentWS\beginKWSessionCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\CallBackService.cs" />
+    <Compile Include="EPAgentWS\CallDataDef.cs" />
+    <Compile Include="EPAgentWS\CallDataDefFields.cs" />
+    <Compile Include="EPAgentWS\CallLogger.cs" />
+    <Compile Include="EPAgentWS\callOutcomeCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\cancelRequestLogoutCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\cancelRequestUnavailableCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Catalog.cs" />
+    <Compile Include="EPAgentWS\chatConnectCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatSendMessageCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatSendURLCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrDialRequestCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrEntityAddedCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrEntityRemovedCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrSendListOfChatEntitesCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrSendMessageCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrSendURLCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\ConcertoFault.cs" />
+    <Compile Include="EPAgentWS\conferenceCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\consultCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\CopyCountMode.cs" />
+    <Compile Include="EPAgentWS\dialCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\DirectorXfer.cs" />
+    <Compile Include="EPAgentWS\Disposition.cs" />
+    <Compile Include="EPAgentWS\DispositionPlan.cs" />
+    <Compile Include="EPAgentWS\Dispositions.cs" />
+    <Compile Include="EPAgentWS\Email.cs" />
+    <Compile Include="EPAgentWS\emailNotifyCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\EmailSubject.cs" />
+    <Compile Include="EPAgentWS\endKWSessionCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\excludeContactCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Expert.cs" />
+    <Compile Include="EPAgentWS\External.cs" />
+    <Compile Include="EPAgentWS\externalRouteCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Externals.cs" />
+    <Compile Include="EPAgentWS\focusCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\forwardEmailCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\forwardEmailSentCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getAgentStateCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getAgentStateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getExpertsCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getExpertsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\GetIdDesc.cs" />
+    <Compile Include="EPAgentWS\getInfoCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getInfoCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getRemoteInfoCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getRemoteInfoCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getStateCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getStateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getTimeZoneCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getTimeZoneCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\hangupCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\holdCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\initiateKWVoiceConsultCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\initiateKWVoiceDialCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\IPNIQNodeDetail.cs" />
+    <Compile Include="EPAgentWS\keepAliveCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\KWSkill.cs" />
+    <Compile Include="EPAgentWS\LoggedInUsers.cs" />
+    <Compile Include="EPAgentWS\LoggedInUsersIM.cs" />
+    <Compile Include="EPAgentWS\MediaRecordings.cs" />
+    <Compile Include="EPAgentWS\MonitorClass.cs" />
+    <Compile Include="EPAgentWS\monitorCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\monitorScreenCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\NLPCategory.cs" />
+    <Compile Include="EPAgentWS\NLPResult.cs" />
+    <Compile Include="EPAgentWS\OCSConfig.cs" />
+    <Compile Include="EPAgentWS\PersonalGreeting.cs" />
+    <Compile Include="EPAgentWS\playDigitsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\recordCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\RecordingComments.cs" />
+    <Compile Include="EPAgentWS\recordingManagementCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\recordingManagementCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\recordScreenCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\refreshPersonalGreetingsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\registerCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\registerExCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestAgentStatsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestEmailReviewCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestEmailSelfServiceCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestLogoutCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestUnavailableCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\resumeMultiAppearancesCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\retrieveHoldCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\scheduleCallbackCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Server.cs" />
+    <Compile Include="EPAgentWS\ServerSettings.cs" />
+    <Compile Include="EPAgentWS\ServerType.cs" />
+    <Compile Include="EPAgentWS\Service.cs" />
+    <Compile Include="EPAgentWS\ServiceEmailQueues.cs" />
+    <Compile Include="EPAgentWS\ServiceSettings.cs" />
+    <Compile Include="EPAgentWS\ServiceVoiceMail.cs" />
+    <Compile Include="EPAgentWS\ServiceXfer.cs" />
+    <Compile Include="EPAgentWS\SGDispositionCode.cs" />
+    <Compile Include="EPAgentWS\SGMonitorClass.cs" />
+    <Compile Include="EPAgentWS\SGRecording.cs" />
+    <Compile Include="EPAgentWS\SGRecordingStore.cs" />
+    <Compile Include="EPAgentWS\SGRecordingTypes.cs" />
+    <Compile Include="EPAgentWS\SGRecStoreType.cs" />
+    <Compile Include="EPAgentWS\SGService.cs" />
+    <Compile Include="EPAgentWS\SGSite.cs" />
+    <Compile Include="EPAgentWS\SGStorageMachine.cs" />
+    <Compile Include="EPAgentWS\SGStorageMachineType.cs" />
+    <Compile Include="EPAgentWS\SGSwitch.cs" />
+    <Compile Include="EPAgentWS\SGVMGroup.cs" />
+    <Compile Include="EPAgentWS\SGWorkgroup.cs" />
+    <Compile Include="EPAgentWS\Site.cs" />
+    <Compile Include="EPAgentWS\StatusReasons.cs" />
+    <Compile Include="EPAgentWS\suspendMultiAppearancesCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Tenant.cs" />
+    <Compile Include="EPAgentWS\TimeZone.cs" />
+    <Compile Include="EPAgentWS\transferCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\UDActivateCall.cs" />
+    <Compile Include="EPAgentWS\UDActive.cs" />
+    <Compile Include="EPAgentWS\UDAgent.cs" />
+    <Compile Include="EPAgentWS\UDAgentInfo.cs" />
+    <Compile Include="EPAgentWS\UDAnswerCall.cs" />
+    <Compile Include="EPAgentWS\UDCall.cs" />
+    <Compile Include="EPAgentWS\UDCallback.cs" />
+    <Compile Include="EPAgentWS\UDCallClear.cs" />
+    <Compile Include="EPAgentWS\UDCallInfoUserDefinedIn.cs" />
+    <Compile Include="EPAgentWS\UDCallInfoUserDefinedItemIn.cs" />
+    <Compile Include="EPAgentWS\UDCallReleasedXferred.cs" />
+    <Compile Include="EPAgentWS\UDCallReRouted.cs" />
+    <Compile Include="EPAgentWS\UDCallXferred.cs" />
+    <Compile Include="EPAgentWS\UDChatConnect.cs" />
+    <Compile Include="EPAgentWS\UDChatDialRequest.cs" />
+    <Compile Include="EPAgentWS\UDChatEntity.cs" />
+    <Compile Include="EPAgentWS\UDChatEntityList.cs" />
+    <Compile Include="EPAgentWS\UDChatEntityPushURL.cs" />
+    <Compile Include="EPAgentWS\UDChatEntitySendText.cs" />
+    <Compile Include="EPAgentWS\UDChatMessage.cs" />
+    <Compile Include="EPAgentWS\UDChatURL.cs" />
+    <Compile Include="EPAgentWS\UDConferenceIn.cs" />
+    <Compile Include="EPAgentWS\UDConsult.cs" />
+    <Compile Include="EPAgentWS\UDConsultIn.cs" />
+    <Compile Include="EPAgentWS\UDDialing.cs" />
+    <Compile Include="EPAgentWS\UDDigits.cs" />
+    <Compile Include="EPAgentWS\UDDirectorAck.cs" />
+    <Compile Include="EPAgentWS\UDDisposition.cs" />
+    <Compile Include="EPAgentWS\UDEmail.cs" />
+    <Compile Include="EPAgentWS\UDEmailNotify.cs" />
+    <Compile Include="EPAgentWS\UDError.cs" />
+    <Compile Include="EPAgentWS\UDExclude.cs" />
+    <Compile Include="EPAgentWS\UDExternalRoute.cs" />
+    <Compile Include="EPAgentWS\UDExternalRouteIn.cs" />
+    <Compile Include="EPAgentWS\UDFocus.cs" />
+    <Compile Include="EPAgentWS\UDForwardEmail.cs" />
+    <Compile Include="EPAgentWS\UDForwardEmailSent.cs" />
+    <Compile Include="EPAgentWS\UDHeld.cs" />
+    <Compile Include="EPAgentWS\UDIdle.cs" />
+    <Compile Include="EPAgentWS\UDInfo.cs" />
+    <Compile Include="EPAgentWS\UDKWConsult.cs" />
+    <Compile Include="EPAgentWS\UDKWDial.cs" />
+    <Compile Include="EPAgentWS\UDKWInfo.cs" />
+    <Compile Include="EPAgentWS\UDLoggingIn.cs" />
+    <Compile Include="EPAgentWS\UDLogin.cs" />
+    <Compile Include="EPAgentWS\UDLoginConf.cs" />
+    <Compile Include="EPAgentWS\UDLogout.cs" />
+    <Compile Include="EPAgentWS\UDMonitor.cs" />
+    <Compile Include="EPAgentWS\UDMonitorState.cs" />
+    <Compile Include="EPAgentWS\UDNewService.cs" />
+    <Compile Include="EPAgentWS\UDNotifyCallDataDef.cs" />
+    <Compile Include="EPAgentWS\UDNotifyCallDataDefFields.cs" />
+    <Compile Include="EPAgentWS\UDNotifyDispositionPlan.cs" />
+    <Compile Include="EPAgentWS\UDNotifyDispositions.cs" />
+    <Compile Include="EPAgentWS\UDNotifyService.cs" />
+    <Compile Include="EPAgentWS\UDNotifyServiceSettings.cs" />
+    <Compile Include="EPAgentWS\UDNotifyUrl.cs" />
+    <Compile Include="EPAgentWS\UDNotReady.cs" />
+    <Compile Include="EPAgentWS\UDParm.cs" />
+    <Compile Include="EPAgentWS\UDPasscode.cs" />
+    <Compile Include="EPAgentWS\UDProperty.cs" />
+    <Compile Include="EPAgentWS\UDRealTimePort.cs" />
+    <Compile Include="EPAgentWS\UDReason.cs" />
+    <Compile Include="EPAgentWS\UDRecorderData.cs" />
+    <Compile Include="EPAgentWS\UDRecordingManagementParms.cs" />
+    <Compile Include="EPAgentWS\UDRecordState.cs" />
+    <Compile Include="EPAgentWS\UDRecStoreType.cs" />
+    <Compile Include="EPAgentWS\UDRemoveService.cs" />
+    <Compile Include="EPAgentWS\UDReserved.cs" />
+    <Compile Include="EPAgentWS\UDScreenMonitor.cs" />
+    <Compile Include="EPAgentWS\UDScreenRecorderData.cs" />
+    <Compile Include="EPAgentWS\UDSite.cs" />
+    <Compile Include="EPAgentWS\UDState.cs" />
+    <Compile Include="EPAgentWS\UDStateInput.cs" />
+    <Compile Include="EPAgentWS\UDSwitch.cs" />
+    <Compile Include="EPAgentWS\UDTransfer.cs" />
+    <Compile Include="EPAgentWS\UDUpdate.cs" />
+    <Compile Include="EPAgentWS\UDUpdateCallDataDef.cs" />
+    <Compile Include="EPAgentWS\UDUpdateDisposition.cs" />
+    <Compile Include="EPAgentWS\UDUpdateDispositionPlan.cs" />
+    <Compile Include="EPAgentWS\UDUpdateRequest.cs" />
+    <Compile Include="EPAgentWS\UDUpdateService.cs" />
+    <Compile Include="EPAgentWS\UDVoiceLock.cs" />
+    <Compile Include="EPAgentWS\UDVoiceUnlock.cs" />
+    <Compile Include="EPAgentWS\UDWarning.cs" />
+    <Compile Include="EPAgentWS\UDWrap.cs" />
+    <Compile Include="EPAgentWS\UDWrapTimeout.cs" />
+    <Compile Include="EPAgentWS\unRegisterCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\updateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\updateNPCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\updateVMNCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\URL.cs" />
+    <Compile Include="EPAgentWS\User.cs" />
+    <Compile Include="EPAgentWS\UserLocale.cs" />
+    <Compile Include="EPAgentWS\UserVoiceMail.cs" />
+    <Compile Include="EPAgentWS\Vector.cs" />
+    <Compile Include="EPAgentWS\VoiceMail.cs" />
+    <Compile Include="EPAgentWS\warningCompletedEventHandler.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceType.cs" />
+    <Compile Include="Utilities\DNSUtility.cs" />
+    <Compile Include="Utilities\ProcessChecker.cs" />
+    <Compile Include="Utilities\ValidateUI.cs" />
+    <Compile Include="Web References\EPAgentWSP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\EPEventsWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <None Include="Web References\EPSecurityWS\AuthenticationMechanism.datasource" />
+    <None Include="Web References\EPSecurityWS\LDAPConfig.datasource" />
+    <None Include="Web References\EPSecurityWS\Reference.map" />
+    <None Include="Web References\EPSecurityWS\SecurityBean.datasource" />
+    <None Include="Web References\EPSecurityWS\SecurityPortalExt.wsdl" />
+    <None Include="Web References\EPSecurityWS\SecurityUser.datasource" />
+    <WebReferenceUrl Include="https://core2019.aspect.co.id:8443/EventService/services/EventService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EPEventsWS\</RelPath>
+      <UpdateFromURL>https://core2019.aspect.co.id:8443/EventService/services/EventService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SamplePortalClient_EPEventsWS_EventServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferences Include="Web References\" />
+    <WebReferenceUrl Include="https://core2019.aspect.co.id:8443/ProvisionService/services/ProvisionService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\EPAgentWSP\</RelPath>
+      <UpdateFromURL>https://core2019.aspect.co.id:8443/ProvisionService/services/ProvisionService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>SamplePortalClient_EPAgentWSP_ProvisioningServiceService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

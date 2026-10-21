@@ -1,0 +1,52 @@
+# @BaseUrl = http://localhost/CafeMortgageApi
+@BaseUrl = http://localhost:5000
+
+POST {{BaseUrl}}/json/reply/GetAccount
+Content-Type: application/json
+
+{
+  "ServiceId": 25,
+  "AccountNo": "003602322001"
+}
+
+###
+GET {{BaseUrl}}/json/reply/GetDisposition
+Accept: application/json
+X-Api-Key: f4e20398-13c5-4a75-8432-3f27f869c28f
+
+###
+PUT {{BaseUrl}}/json/reply/UpdateAccount
+Accept: application/json
+Content-Type: application/json
+
+{
+  "Action": "PHONEREMINDER",
+  "TableName": "Loan_Danamon",
+  "AccountNo": "003602322001",
+  "AccountNo1": "003602322001",
+  "AccountNo2": "003602322001",
+  "Data": {
+    "Address": {
+      "NEW_ADDRESS_L1": "L1",
+      "NEW_ADDRESS_L2": "L2",
+      "NEW_ADDRESS_L3": "L3",
+      "NEW_CITY": "CITY",
+      "NEW_PHONE1": "PHONE1",
+      "NEW_PHONE2": "PHONE2",
+      "NEW_MOBILE": "MOBILE"
+    },
+    "Other": {
+      "INPUT_CONTACT_PLACE1": "PLACE1",
+      "IN_PERSON_CONTACT1": "CONTACT1",
+      "INPUT_REMARKS1": "REMARKS1",
+      "ACTION2": "AC2",
+      "ACTION3": "AC3",
+      "PTPAMOUNT": 1000,
+      "PTPDATE": "2025-09-10",
+      "PTPAMOUNT2": 2000,
+      "PTPDATE2": "2025-09-11",
+      "PTPAMOUNT3": 3000,
+      "PTPDATE3": "2025-09-13"
+    }
+  }
+}

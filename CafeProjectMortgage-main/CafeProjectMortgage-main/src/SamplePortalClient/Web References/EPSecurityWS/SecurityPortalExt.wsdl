@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:impl="http://SecurityService.UD.concerto.com" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:intf="http://SecurityService.UD.concerto.com" targetNamespace="http://SecurityService.UD.concerto.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://SecurityService.UD.concerto.com">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="SecurityMessage">
+        <xsd:sequence>
+          <xsd:element name="CODE" nillable="true" type="soapenc:string" />
+          <xsd:element name="DESC" nillable="true" type="soapenc:string" />
+          <xsd:element name="SUBCODE" nillable="true" type="soapenc:string" />
+          <xsd:element name="SUBDESC" nillable="true" type="soapenc:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="UDSecurityException">
+        <xsd:sequence>
+          <xsd:element name="securityMessage" nillable="true" type="intf:SecurityMessage" />
+          <xsd:element name="subErrorDesc" nillable="true" type="soapenc:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SecurityBean">
+        <xsd:sequence>
+          <xsd:element name="authentication" type="xsd:boolean" />
+          <xsd:element name="errorcode" type="xsd:int" />
+          <xsd:element name="errordesc" nillable="true" type="soapenc:string" />
+          <xsd:element name="idletimeout" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfString">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="soapenc:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="LDAPConfig">
+        <xsd:sequence>
+          <xsd:element name="alias" nillable="true" type="soapenc:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfLDAPConfig">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="intf:LDAPConfig[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="AuthenticationMechanism">
+        <xsd:sequence>
+          <xsd:element name="description" nillable="true" type="soapenc:string" />
+          <xsd:element name="mechanismType" nillable="true" type="soapenc:string" />
+          <xsd:element name="productName" nillable="true" type="soapenc:string" />
+          <xsd:element name="productVersion" nillable="true" type="soapenc:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="SecurityUser">
+        <xsd:sequence>
+          <xsd:element name="comment" nillable="true" type="soapenc:string" />
+          <xsd:element name="email" nillable="true" type="soapenc:string" />
+          <xsd:element name="firstName" nillable="true" type="soapenc:string" />
+          <xsd:element name="fullName" nillable="true" type="soapenc:string" />
+          <xsd:element name="lastName" nillable="true" type="soapenc:string" />
+          <xsd:element name="location" nillable="true" type="soapenc:string" />
+          <xsd:element name="phone" nillable="true" type="soapenc:string" />
+          <xsd:element name="userId" nillable="true" type="soapenc:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOfSecurityUser">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="intf:SecurityUser[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UDSecurityException">
+    <wsdl:part name="fault" type="intf:UDSecurityException" />
+  </wsdl:message>
+  <wsdl:message name="SearchUsersExtResponse">
+    <wsdl:part name="SearchUsersExtReturn" type="intf:ArrayOfSecurityUser" />
+  </wsdl:message>
+  <wsdl:message name="keepAliveAccessRequest">
+    <wsdl:part name="userId" type="soapenc:string" />
+    <wsdl:part name="clientGUID" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchUsersExtRequest">
+    <wsdl:part name="alias" type="soapenc:string" />
+    <wsdl:part name="pattern" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthenticationMechanismResponse">
+    <wsdl:part name="GetAuthenticationMechanismReturn" type="intf:AuthenticationMechanism" />
+  </wsdl:message>
+  <wsdl:message name="authenticateClientRequest">
+    <wsdl:part name="userId" type="soapenc:string" />
+    <wsdl:part name="password" type="soapenc:string" />
+    <wsdl:part name="clientGUID" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDirectoryListResponse">
+    <wsdl:part name="GetDirectoryListReturn" type="intf:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="GetDirectoryListRequest" />
+  <wsdl:message name="GetAuthenticationMechanismRequest" />
+  <wsdl:message name="authenticateClientResponse">
+    <wsdl:part name="authenticateClientReturn" type="intf:SecurityBean" />
+  </wsdl:message>
+  <wsdl:message name="searchUsersResponse">
+    <wsdl:part name="searchUsersReturn" type="intf:ArrayOfSecurityUser" />
+  </wsdl:message>
+  <wsdl:message name="authenticateRequest">
+    <wsdl:part name="userId" type="soapenc:string" />
+    <wsdl:part name="password" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="searchUsersRequest">
+    <wsdl:part name="pattern" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="keepAliveAccessResponse" />
+  <wsdl:message name="GetDirectoryObjListResponse">
+    <wsdl:part name="GetDirectoryObjListReturn" type="intf:ArrayOfLDAPConfig" />
+  </wsdl:message>
+  <wsdl:message name="GetDirectoryObjListRequest" />
+  <wsdl:message name="authenticateResponse">
+    <wsdl:part name="authenticateReturn" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="SecurityServiceWrapperExt">
+    <wsdl:operation name="authenticate" parameterOrder="userId password">
+      <wsdl:input name="authenticateRequest" message="intf:authenticateRequest" />
+      <wsdl:output name="authenticateResponse" message="intf:authenticateResponse" />
+      <wsdl:fault name="UDSecurityException" message="intf:UDSecurityException" />
+    </wsdl:operation>
+    <wsdl:operation name="authenticateClient" parameterOrder="userId password clientGUID">
+      <wsdl:input name="authenticateClientRequest" message="intf:authenticateClientRequest" />
+      <wsdl:output name="authenticateClientResponse" message="intf:authenticateClientResponse" />
+      <wsdl:fault name="UDSecurityException" message="intf:UDSecurityException" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryList">
+      <wsdl:input name="GetDirectoryListRequest" message="intf:GetDirectoryListRequest" />
+      <wsdl:output name="GetDirectoryListResponse" message="intf:GetDirectoryListResponse" />
+      <wsdl:fault name="UDSecurityException" message="intf:UDSecurityException" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryObjList">
+      <wsdl:input name="GetDirectoryObjListRequest" message="intf:GetDirectoryObjListRequest" />
+      <wsdl:output name="GetDirectoryObjListResponse" message="intf:GetDirectoryObjListResponse" />
+      <wsdl:fault name="UDSecurityException" message="intf:UDSecurityException" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationMechanism">
+      <wsdl:input name="GetAuthenticationMechanismRequest" message="intf:GetAuthenticationMechanismRequest" />
+      <wsdl:output name="GetAuthenticationMechanismResponse" message="intf:GetAuthenticationMechanismResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="searchUsers" parameterOrder="pattern">
+      <wsdl:input name="searchUsersRequest" message="intf:searchUsersRequest" />
+      <wsdl:output name="searchUsersResponse" message="intf:searchUsersResponse" />
+      <wsdl:fault name="UDSecurityException" message="intf:UDSecurityException" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsersExt" parameterOrder="alias pattern">
+      <wsdl:input name="SearchUsersExtRequest" message="intf:SearchUsersExtRequest" />
+      <wsdl:output name="SearchUsersExtResponse" message="intf:SearchUsersExtResponse" />
+      <wsdl:fault name="UDSecurityException" message="intf:UDSecurityException" />
+    </wsdl:operation>
+    <wsdl:operation name="keepAliveAccess" parameterOrder="userId clientGUID">
+      <wsdl:input name="keepAliveAccessRequest" message="intf:keepAliveAccessRequest" />
+      <wsdl:output name="keepAliveAccessResponse" message="intf:keepAliveAccessResponse" />
+      <wsdl:fault name="UDSecurityException" message="intf:UDSecurityException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SecurityPortalExtSoapBinding" type="intf:SecurityServiceWrapperExt">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="authenticate">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="authenticateRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="authenticateResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="UDSecurityException">
+        <wsdlsoap:fault use="encoded" name="UDSecurityException" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="authenticateClient">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="authenticateClientRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="authenticateClientResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="UDSecurityException">
+        <wsdlsoap:fault use="encoded" name="UDSecurityException" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetDirectoryListRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetDirectoryListResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="UDSecurityException">
+        <wsdlsoap:fault use="encoded" name="UDSecurityException" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryObjList">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetDirectoryObjListRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetDirectoryObjListResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="UDSecurityException">
+        <wsdlsoap:fault use="encoded" name="UDSecurityException" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthenticationMechanism">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="GetAuthenticationMechanismRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="GetAuthenticationMechanismResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="searchUsers">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="searchUsersRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="searchUsersResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="UDSecurityException">
+        <wsdlsoap:fault use="encoded" name="UDSecurityException" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUsersExt">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="SearchUsersExtRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="SearchUsersExtResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="UDSecurityException">
+        <wsdlsoap:fault use="encoded" name="UDSecurityException" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="keepAliveAccess">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="keepAliveAccessRequest">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="keepAliveAccessResponse">
+        <wsdlsoap:body use="encoded" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+      <wsdl:fault name="UDSecurityException">
+        <wsdlsoap:fault use="encoded" name="UDSecurityException" namespace="http://SecurityService.UD.concerto.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecurityServiceWrapperExtService">
+    <wsdl:port name="SecurityPortalExt" binding="intf:SecurityPortalExtSoapBinding">
+      <wsdlsoap:address location="https://core2019.aspect.co.id:8443/ConcertoSecurityPortal/services/SecurityPortalExt" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

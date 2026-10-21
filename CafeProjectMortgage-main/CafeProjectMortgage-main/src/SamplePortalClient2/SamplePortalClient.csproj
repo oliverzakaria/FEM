@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6B7B6562-1B09-4EF3-9FFD-4FE5D7098949}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>SamplePortalClient</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SamplePortalClient</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <WebReference_EnableProperties>true</WebReference_EnableProperties>
+    <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
+    <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>packages\log4net.3.2.0\lib\net462\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EPAgentWS\Agent.cs" />
+    <Compile Include="EPAgentWS\AgentKWUserInfo.cs" />
+    <Compile Include="EPAgentWS\AgentPortalException.cs" />
+    <Compile Include="EPAgentWS\AgentSetting.cs" />
+    <Compile Include="EPAgentWS\AgentType.cs" />
+    <Compile Include="EPAgentWS\AgentWebServiceService.cs" />
+    <Compile Include="EPAgentWS\AgentXfer.cs" />
+    <Compile Include="EPAgentWS\answerCallCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Attachemnts.cs" />
+    <Compile Include="EPAgentWS\authenticateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\availableCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\BarcodeMode.cs" />
+    <Compile Include="EPAgentWS\beginKWSessionCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\CallBackService.cs" />
+    <Compile Include="EPAgentWS\CallDataDef.cs" />
+    <Compile Include="EPAgentWS\CallDataDefFields.cs" />
+    <Compile Include="EPAgentWS\CallLogger.cs" />
+    <Compile Include="EPAgentWS\callOutcomeCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\cancelRequestLogoutCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\cancelRequestUnavailableCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Catalog.cs" />
+    <Compile Include="EPAgentWS\chatConnectCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatSendMessageCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatSendURLCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrDialRequestCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrEntityAddedCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrEntityRemovedCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrSendListOfChatEntitesCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrSendMessageCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\chatsvrSendURLCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\ConcertoFault.cs" />
+    <Compile Include="EPAgentWS\conferenceCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\consultCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\CopyCountMode.cs" />
+    <Compile Include="EPAgentWS\dialCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\DirectorXfer.cs" />
+    <Compile Include="EPAgentWS\Disposition.cs" />
+    <Compile Include="EPAgentWS\DispositionPlan.cs" />
+    <Compile Include="EPAgentWS\Dispositions.cs" />
+    <Compile Include="EPAgentWS\Email.cs" />
+    <Compile Include="EPAgentWS\emailNotifyCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\EmailSubject.cs" />
+    <Compile Include="EPAgentWS\endKWSessionCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\excludeContactCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Expert.cs" />
+    <Compile Include="EPAgentWS\External.cs" />
+    <Compile Include="EPAgentWS\externalRouteCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Externals.cs" />
+    <Compile Include="EPAgentWS\focusCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\forwardEmailCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\forwardEmailSentCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getAgentStateCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getAgentStateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getExpertsCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getExpertsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\GetIdDesc.cs" />
+    <Compile Include="EPAgentWS\getInfoCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getInfoCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getRemoteInfoCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getRemoteInfoCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getStateCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getStateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\getTimeZoneCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\getTimeZoneCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\hangupCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\holdCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\initiateKWVoiceConsultCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\initiateKWVoiceDialCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\IPNIQNodeDetail.cs" />
+    <Compile Include="EPAgentWS\keepAliveCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\KWSkill.cs" />
+    <Compile Include="EPAgentWS\LoggedInUsers.cs" />
+    <Compile Include="EPAgentWS\LoggedInUsersIM.cs" />
+    <Compile Include="EPAgentWS\MediaRecordings.cs" />
+    <Compile Include="EPAgentWS\MonitorClass.cs" />
+    <Compile Include="EPAgentWS\monitorCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\monitorScreenCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\NLPCategory.cs" />
+    <Compile Include="EPAgentWS\NLPResult.cs" />
+    <Compile Include="EPAgentWS\OCSConfig.cs" />
+    <Compile Include="EPAgentWS\PersonalGreeting.cs" />
+    <Compile Include="EPAgentWS\playDigitsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\recordCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\RecordingComments.cs" />
+    <Compile Include="EPAgentWS\recordingManagementCompletedEventArgs.cs" />
+    <Compile Include="EPAgentWS\recordingManagementCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\recordScreenCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\refreshPersonalGreetingsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\registerCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\registerExCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestAgentStatsCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestEmailReviewCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestEmailSelfServiceCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestLogoutCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\requestUnavailableCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\resumeMultiAppearancesCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\retrieveHoldCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\scheduleCallbackCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Server.cs" />
+    <Compile Include="EPAgentWS\ServerSettings.cs" />
+    <Compile Include="EPAgentWS\ServerType.cs" />
+    <Compile Include="EPAgentWS\Service.cs" />
+    <Compile Include="EPAgentWS\ServiceEmailQueues.cs" />
+    <Compile Include="EPAgentWS\ServiceSettings.cs" />
+    <Compile Include="EPAgentWS\ServiceVoiceMail.cs" />
+    <Compile Include="EPAgentWS\ServiceXfer.cs" />
+    <Compile Include="EPAgentWS\SGDispositionCode.cs" />
+    <Compile Include="EPAgentWS\SGMonitorClass.cs" />
+    <Compile Include="EPAgentWS\SGRecording.cs" />
+    <Compile Include="EPAgentWS\SGRecordingStore.cs" />
+    <Compile Include="EPAgentWS\SGRecordingTypes.cs" />
+    <Compile Include="EPAgentWS\SGRecStoreType.cs" />
+    <Compile Include="EPAgentWS\SGService.cs" />
+    <Compile Include="EPAgentWS\SGSite.cs" />
+    <Compile Include="EPAgentWS\SGStorageMachine.cs" />
+    <Compile Include="EPAgentWS\SGStorageMachineType.cs" />
+    <Compile Include="EPAgentWS\SGSwitch.cs" />
+    <Compile Include="EPAgentWS\SGVMGroup.cs" />
+    <Compile Include="EPAgentWS\SGWorkgroup.cs" />
+    <Compile Include="EPAgentWS\Site.cs" />
+    <Compile Include="EPAgentWS\StatusReasons.cs" />
+    <Compile Include="EPAgentWS\suspendMultiAppearancesCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\Tenant.cs" />
+    <Compile Include="EPAgentWS\TimeZone.cs" />
+    <Compile Include="EPAgentWS\transferCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\UDActivateCall.cs" />
+    <Compile Include="EPAgentWS\UDActive.cs" />
+    <Compile Include="EPAgentWS\UDAgent.cs" />
+    <Compile Include="EPAgentWS\UDAgentInfo.cs" />
+    <Compile Include="EPAgentWS\UDAnswerCall.cs" />
+    <Compile Include="EPAgentWS\UDCall.cs" />
+    <Compile Include="EPAgentWS\UDCallback.cs" />
+    <Compile Include="EPAgentWS\UDCallClear.cs" />
+    <Compile Include="EPAgentWS\UDCallInfoUserDefinedIn.cs" />
+    <Compile Include="EPAgentWS\UDCallInfoUserDefinedItemIn.cs" />
+    <Compile Include="EPAgentWS\UDCallReleasedXferred.cs" />
+    <Compile Include="EPAgentWS\UDCallReRouted.cs" />
+    <Compile Include="EPAgentWS\UDCallXferred.cs" />
+    <Compile Include="EPAgentWS\UDChatConnect.cs" />
+    <Compile Include="EPAgentWS\UDChatDialRequest.cs" />
+    <Compile Include="EPAgentWS\UDChatEntity.cs" />
+    <Compile Include="EPAgentWS\UDChatEntityList.cs" />
+    <Compile Include="EPAgentWS\UDChatEntityPushURL.cs" />
+    <Compile Include="EPAgentWS\UDChatEntitySendText.cs" />
+    <Compile Include="EPAgentWS\UDChatMessage.cs" />
+    <Compile Include="EPAgentWS\UDChatURL.cs" />
+    <Compile Include="EPAgentWS\UDConferenceIn.cs" />
+    <Compile Include="EPAgentWS\UDConsult.cs" />
+    <Compile Include="EPAgentWS\UDConsultIn.cs" />
+    <Compile Include="EPAgentWS\UDDialing.cs" />
+    <Compile Include="EPAgentWS\UDDigits.cs" />
+    <Compile Include="EPAgentWS\UDDirectorAck.cs" />
+    <Compile Include="EPAgentWS\UDDisposition.cs" />
+    <Compile Include="EPAgentWS\UDEmail.cs" />
+    <Compile Include="EPAgentWS\UDEmailNotify.cs" />
+    <Compile Include="EPAgentWS\UDError.cs" />
+    <Compile Include="EPAgentWS\UDExclude.cs" />
+    <Compile Include="EPAgentWS\UDExternalRoute.cs" />
+    <Compile Include="EPAgentWS\UDExternalRouteIn.cs" />
+    <Compile Include="EPAgentWS\UDFocus.cs" />
+    <Compile Include="EPAgentWS\UDForwardEmail.cs" />
+    <Compile Include="EPAgentWS\UDForwardEmailSent.cs" />
+    <Compile Include="EPAgentWS\UDHeld.cs" />
+    <Compile Include="EPAgentWS\UDIdle.cs" />
+    <Compile Include="EPAgentWS\UDInfo.cs" />
+    <Compile Include="EPAgentWS\UDKWConsult.cs" />
+    <Compile Include="EPAgentWS\UDKWDial.cs" />
+    <Compile Include="EPAgentWS\UDKWInfo.cs" />
+    <Compile Include="EPAgentWS\UDLoggingIn.cs" />
+    <Compile Include="EPAgentWS\UDLogin.cs" />
+    <Compile Include="EPAgentWS\UDLoginConf.cs" />
+    <Compile Include="EPAgentWS\UDLogout.cs" />
+    <Compile Include="EPAgentWS\UDMonitor.cs" />
+    <Compile Include="EPAgentWS\UDMonitorState.cs" />
+    <Compile Include="EPAgentWS\UDNewService.cs" />
+    <Compile Include="EPAgentWS\UDNotifyCallDataDef.cs" />
+    <Compile Include="EPAgentWS\UDNotifyCallDataDefFields.cs" />
+    <Compile Include="EPAgentWS\UDNotifyDispositionPlan.cs" />
+    <Compile Include="EPAgentWS\UDNotifyDispositions.cs" />
+    <Compile Include="EPAgentWS\UDNotifyService.cs" />
+    <Compile Include="EPAgentWS\UDNotifyServiceSettings.cs" />
+    <Compile Include="EPAgentWS\UDNotifyUrl.cs" />
+    <Compile Include="EPAgentWS\UDNotReady.cs" />
+    <Compile Include="EPAgentWS\UDParm.cs" />
+    <Compile Include="EPAgentWS\UDPasscode.cs" />
+    <Compile Include="EPAgentWS\UDProperty.cs" />
+    <Compile Include="EPAgentWS\UDRealTimePort.cs" />
+    <Compile Include="EPAgentWS\UDReason.cs" />
+    <Compile Include="EPAgentWS\UDRecorderData.cs" />
+    <Compile Include="EPAgentWS\UDRecordingManagementParms.cs" />
+    <Compile Include="EPAgentWS\UDRecordState.cs" />
+    <Compile Include="EPAgentWS\UDRecStoreType.cs" />
+    <Compile Include="EPAgentWS\UDRemoveService.cs" />
+    <Compile Include="EPAgentWS\UDReserved.cs" />
+    <Compile Include="EPAgentWS\UDScreenMonitor.cs" />
+    <Compile Include="EPAgentWS\UDScreenRecorderData.cs" />
+    <Compile Include="EPAgentWS\UDSite.cs" />
+    <Compile Include="EPAgentWS\UDState.cs" />
+    <Compile Include="EPAgentWS\UDStateInput.cs" />
+    <Compile Include="EPAgentWS\UDSwitch.cs" />
+    <Compile Include="EPAgentWS\UDTransfer.cs" />
+    <Compile Include="EPAgentWS\UDUpdate.cs" />
+    <Compile Include="EPAgentWS\UDUpdateCallDataDef.cs" />
+    <Compile Include="EPAgentWS\UDUpdateDisposition.cs" />
+    <Compile Include="EPAgentWS\UDUpdateDispositionPlan.cs" />
+    <Compile Include="EPAgentWS\UDUpdateRequest.cs" />
+    <Compile Include="EPAgentWS\UDUpdateService.cs" />
+    <Compile Include="EPAgentWS\UDVoiceLock.cs" />
+    <Compile Include="EPAgentWS\UDVoiceUnlock.cs" />
+    <Compile Include="EPAgentWS\UDWarning.cs" />
+    <Compile Include="EPAgentWS\UDWrap.cs" />
+    <Compile Include="EPAgentWS\UDWrapTimeout.cs" />
+    <Compile Include="EPAgentWS\unRegisterCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\updateCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\updateNPCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\updateVMNCompletedEventHandler.cs" />
+    <Compile Include="EPAgentWS\URL.cs" />
+    <Compile Include="EPAgentWS\User.cs" />
+    <Compile Include="EPAgentWS\UserLocale.cs" />
+    <Compile Include="EPAgentWS\UserVoiceMail.cs" />
+    <Compile Include="EPAgentWS\Vector.cs" />
+    <Compile Include="EPAgentWS\VoiceMail.cs" />
+    <Compile Include="EPAgentWS\warningCompletedEventHandler.cs" />
+    <Compile Include="EPEventsWS\AgentEvent.cs" />
+    <Compile Include="EPEventsWS\AlertEvent.cs" />
+    <Compile Include="EPEventsWS\EventServiceFault.cs" />
+    <Compile Include="EPEventsWS\EventServiceService.cs" />
+    <Compile Include="EPEventsWS\getNextAgentEventAckCompletedEventArgs.cs" />
+    <Compile Include="EPEventsWS\getNextAgentEventAckCompletedEventHandler.cs" />
+    <Compile Include="EPEventsWS\getNextAgentEventCompletedEventArgs.cs" />
+    <Compile Include="EPEventsWS\getNextAgentEventCompletedEventHandler.cs" />
+    <Compile Include="EPEventsWS\getNextAlertEventCompletedEventArgs.cs" />
+    <Compile Include="EPEventsWS\getNextAlertEventCompletedEventHandler.cs" />
+    <Compile Include="EPEventsWS\registerAgentEventSubscriberCompletedEventArgs.cs" />
+    <Compile Include="EPEventsWS\registerAgentEventSubscriberCompletedEventHandler.cs" />
+    <Compile Include="EPEventsWS\registerAlertEventSubscriberCompletedEventArgs.cs" />
+    <Compile Include="EPEventsWS\registerAlertEventSubscriberCompletedEventHandler.cs" />
+    <Compile Include="EPEventsWS\registerAllAgentEventSubscriberCompletedEventArgs.cs" />
+    <Compile Include="EPEventsWS\registerAllAgentEventSubscriberCompletedEventHandl.cs" />
+    <Compile Include="EPEventsWS\UDActivateCall.cs" />
+    <Compile Include="EPEventsWS\UDActive.cs" />
+    <Compile Include="EPEventsWS\UDAgentIndex.cs" />
+    <Compile Include="EPEventsWS\UDAgentStats.cs" />
+    <Compile Include="EPEventsWS\UDAgentStatsCollection.cs" />
+    <Compile Include="EPEventsWS\UDAudioPathConnection.cs" />
+    <Compile Include="EPEventsWS\UDBadPassCode.cs" />
+    <Compile Include="EPEventsWS\UDCallClear.cs" />
+    <Compile Include="EPEventsWS\UDCallInfo.cs" />
+    <Compile Include="EPEventsWS\UDCallInfoAod.cs" />
+    <Compile Include="EPEventsWS\UDCallInfoCallback.cs" />
+    <Compile Include="EPEventsWS\UDCallInfoEmail.cs" />
+    <Compile Include="EPEventsWS\UDCallInfoOther.cs" />
+    <Compile Include="EPEventsWS\UDCallInfoScreen.cs" />
+    <Compile Include="EPEventsWS\UDCallInfoUserDefined.cs" />
+    <Compile Include="EPEventsWS\UDCallInfoUserDefinedItem.cs" />
+    <Compile Include="EPEventsWS\UDCallReleasedXferred.cs" />
+    <Compile Include="EPEventsWS\UDCallReRouted.cs" />
+    <Compile Include="EPEventsWS\UDCallXferred.cs" />
+    <Compile Include="EPEventsWS\UDCCDown.cs" />
+    <Compile Include="EPEventsWS\UDConference.cs" />
+    <Compile Include="EPEventsWS\UDConsult.cs" />
+    <Compile Include="EPEventsWS\UDDialing.cs" />
+    <Compile Include="EPEventsWS\UDDialRequest.cs" />
+    <Compile Include="EPEventsWS\UDDirectorAck.cs" />
+    <Compile Include="EPEventsWS\UDEMailServiceStatistics.cs" />
+    <Compile Include="EPEventsWS\UDEMailServiceStatisticsColl.cs" />
+    <Compile Include="EPEventsWS\UDEntity.cs" />
+    <Compile Include="EPEventsWS\UDEntityList.cs" />
+    <Compile Include="EPEventsWS\UDEntityPushUrl.cs" />
+    <Compile Include="EPEventsWS\UDEntitySendText.cs" />
+    <Compile Include="EPEventsWS\UDError.cs" />
+    <Compile Include="EPEventsWS\UDExternalRoute.cs" />
+    <Compile Include="EPEventsWS\UDForwardEmailAck.cs" />
+    <Compile Include="EPEventsWS\UDHeld.cs" />
+    <Compile Include="EPEventsWS\UDIdle.cs" />
+    <Compile Include="EPEventsWS\UDLoggingIn.cs" />
+    <Compile Include="EPEventsWS\UDLogin.cs" />
+    <Compile Include="EPEventsWS\UDLoginConf.cs" />
+    <Compile Include="EPEventsWS\UDLogout.cs" />
+    <Compile Include="EPEventsWS\UDMonitorState.cs" />
+    <Compile Include="EPEventsWS\UDNewService.cs" />
+    <Compile Include="EPEventsWS\UDNewTimeZone.cs" />
+    <Compile Include="EPEventsWS\UDNotifyCallDataDef.cs" />
+    <Compile Include="EPEventsWS\UDNotifyCallDataDefFields.cs" />
+    <Compile Include="EPEventsWS\UDNotifyDispositionPlan.cs" />
+    <Compile Include="EPEventsWS\UDNotifyDispositions.cs" />
+    <Compile Include="EPEventsWS\UDNotifyService.cs" />
+    <Compile Include="EPEventsWS\UDNotifyServiceSettings.cs" />
+    <Compile Include="EPEventsWS\UDNotifyTimeZone.cs" />
+    <Compile Include="EPEventsWS\UDNotifyUrl.cs" />
+    <Compile Include="EPEventsWS\UDNotReady.cs" />
+    <Compile Include="EPEventsWS\UDPasscode.cs" />
+    <Compile Include="EPEventsWS\UDPreview.cs" />
+    <Compile Include="EPEventsWS\UDRealTimePort.cs" />
+    <Compile Include="EPEventsWS\UDRecordState.cs" />
+    <Compile Include="EPEventsWS\UDRemoveService.cs" />
+    <Compile Include="EPEventsWS\UDRemoveTimeZone.cs" />
+    <Compile Include="EPEventsWS\UDReserved.cs" />
+    <Compile Include="EPEventsWS\UDScreenCapture.cs" />
+    <Compile Include="EPEventsWS\UDScreenPop.cs" />
+    <Compile Include="EPEventsWS\UDSwitch.cs" />
+    <Compile Include="EPEventsWS\UDSystemWait.cs" />
+    <Compile Include="EPEventsWS\UDUpdateCallDataDef.cs" />
+    <Compile Include="EPEventsWS\UDUpdateDisposition.cs" />
+    <Compile Include="EPEventsWS\UDUpdateDispositionPlan.cs" />
+    <Compile Include="EPEventsWS\UDUpdateService.cs" />
+    <Compile Include="EPEventsWS\UDUpdateTimeZone.cs" />
+    <Compile Include="EPEventsWS\UDVoiceLock.cs" />
+    <Compile Include="EPEventsWS\UDVoiceUnlock.cs" />
+    <Compile Include="EPEventsWS\UDWrap.cs" />
+    <Compile Include="EPEventsWS\UDWrapTimeout.cs" />
+    <Compile Include="EPEventsWS\unregisterAgentEventSubscriberCompletedEventHandle.cs" />
+    <Compile Include="EPEventsWS\unregisterAlertEventSubscriberCompletedEventHandle.cs" />
+    <Compile Include="EPEventsWS\Vector.cs" />
+    <Compile Include="WrapType.cs" />
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="App.ico" />
+    <Compile Include="AgentCallType.cs" />
+    <Compile Include="AgentEventType.cs" />
+    <Compile Include="AgentInfoType.cs" />
+    <Compile Include="AgentMediaType.cs" />
+    <Compile Include="AgentStateId.cs" />
+    <Compile Include="AgentType.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="C3WayCall.cs" />
+    <Compile Include="C3WayCall1stParty.cs" />
+    <Compile Include="C3WayCall3rdParty.cs" />
+    <Compile Include="C3WayCallConference.cs" />
+    <Compile Include="C3WayCallManager.cs" />
+    <Compile Include="CAgent.cs" />
+    <Compile Include="CAgentEvent.cs" />
+    <Compile Include="CAgentEventRaised.cs" />
+    <Compile Include="CAgents.cs" />
+    <Compile Include="CAgentStatistics.cs" />
+    <Compile Include="CallActivatedHandler.cs" />
+    <Compile Include="CallStateChangeHandler.cs" />
+    <Compile Include="CApp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CAssignedServices.cs" />
+    <Compile Include="CCall.cs" />
+    <Compile Include="CCallActivatedArgs.cs" />
+    <Compile Include="CCallAOD.cs" />
+    <Compile Include="CCallChat.cs" />
+    <Compile Include="CCallEmail.cs" />
+    <Compile Include="CCallGeneric.cs" />
+    <Compile Include="CCallManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CCallRejectionReason.cs" />
+    <Compile Include="CCallRejectionReasons.cs" />
+    <Compile Include="CCallRemainingConsultation.cs" />
+    <Compile Include="CCallState.cs" />
+    <Compile Include="CCallStateChangeArgs.cs" />
+    <Compile Include="CCallVoice.cs" />
+    <Compile Include="CChatEntityArgs.cs" />
+    <Compile Include="CChatMessageArgs.cs" />
+    <Compile Include="CChatURLArgs.cs" />
+    <Compile Include="CDisposition.cs" />
+    <Compile Include="CDispositionPlan.cs" />
+    <Compile Include="CDispositionPlans.cs" />
+    <Compile Include="CDispositions.cs" />
+    <Compile Include="CErrorArgs.cs" />
+    <Compile Include="CEventArrivalArgs.cs" />
+    <Compile Include="CEventManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CEventManagerHelper.cs" />
+    <Compile Include="CExternalRoute.cs" />
+    <Compile Include="CExternalRoutes.cs" />
+    <Compile Include="CHandlerActivateCall.cs" />
+    <Compile Include="CHandlerActive.cs" />
+    <Compile Include="CHandlerAudioPathConnection.cs" />
+    <Compile Include="CHandlerAuthenticated.cs" />
+    <Compile Include="CHandlerBadPasscode.cs" />
+    <Compile Include="CHandlerCallClear.cs" />
+    <Compile Include="CHandlerCallReleasedXferred.cs" />
+    <Compile Include="CHandlerCallReRouted.cs" />
+    <Compile Include="CHandlerCallXferred.cs" />
+    <Compile Include="CHandlerChatEntityAdded.cs" />
+    <Compile Include="CHandlerChatEntityRemoved.cs" />
+    <Compile Include="CHandlerChatMessage.cs" />
+    <Compile Include="CHandlerChatURL.cs" />
+    <Compile Include="CHandlerConference.cs" />
+    <Compile Include="CHandlerConsulting.cs" />
+    <Compile Include="CHandlerDialing.cs" />
+    <Compile Include="CHandlerError.cs" />
+    <Compile Include="CHandlerHeld.cs" />
+    <Compile Include="CHandlerIdle.cs" />
+    <Compile Include="CHandlerLoggingIn.cs" />
+    <Compile Include="CHandlerLogin.cs" />
+    <Compile Include="CHandlerLoginConf.cs" />
+    <Compile Include="CHandlerLogout.cs" />
+    <Compile Include="CHandlerLogoutPending.cs" />
+    <Compile Include="CHandlerNewService.cs" />
+    <Compile Include="CHandlerNotReady.cs" />
+    <Compile Include="CHandlerPasscode.cs" />
+    <Compile Include="CHandlerPreview.cs" />
+    <Compile Include="CHandlerRemoveService.cs" />
+    <Compile Include="CHandlerScreenpop.cs" />
+    <Compile Include="CHandlerSystemWait.cs" />
+    <Compile Include="CHandlerUpdateAgentStatusReasons.cs" />
+    <Compile Include="CHandlerUpdateExternalRoute.cs" />
+    <Compile Include="CHandlerUpdateService.cs" />
+    <Compile Include="CHandlerWrap.cs" />
+    <Compile Include="CHandlerWrapTimeout.cs" />
+    <Compile Include="ChatEntityHandler.cs" />
+    <Compile Include="ChatEntityType.cs" />
+    <Compile Include="ChatMessageHandler.cs" />
+    <Compile Include="ChatURLHandler.cs" />
+    <Compile Include="CList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CListItem.cs" />
+    <Compile Include="CLogoutReason.cs" />
+    <Compile Include="CLogoutReasons.cs" />
+    <Compile Include="CNotReadyReason.cs" />
+    <Compile Include="CNotReadyReasons.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="ConsultType.cs" />
+    <Compile Include="CParkReason.cs" />
+    <Compile Include="CParkReasons.cs" />
+    <Compile Include="CPasscodeArgs.cs" />
+    <Compile Include="CPhoneStatusArgs.cs" />
+    <Compile Include="CPortal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CRecording.cs" />
+    <Compile Include="CScreenpopArgs.cs" />
+    <Compile Include="CService.cs" />
+    <Compile Include="CServiceAOD.cs" />
+    <Compile Include="CServiceChat.cs" />
+    <Compile Include="CServiceManual.cs" />
+    <Compile Include="CServices.cs" />
+    <Compile Include="CSimpleService.cs" />
+    <Compile Include="CSpeedDial.cs" />
+    <Compile Include="CState.cs" />
+    <Compile Include="CStateActive.cs" />
+    <Compile Include="CStateActiveInternal.cs" />
+    <Compile Include="CStateAuthenticated.cs" />
+    <Compile Include="CStateChangeArgs.cs" />
+    <Compile Include="CStateChatting.cs" />
+    <Compile Include="CStateConference.cs" />
+    <Compile Include="CStateConsulting.cs" />
+    <Compile Include="CStateDialing.cs" />
+    <Compile Include="CStateDialingConsultation.cs" />
+    <Compile Include="CStateHeld.cs" />
+    <Compile Include="CStateIdle.cs" />
+    <Compile Include="CStateInactive.cs" />
+    <Compile Include="CStateLoggedOut.cs" />
+    <Compile Include="CStateLoggingIn.cs" />
+    <Compile Include="CStateNotReady.cs" />
+    <Compile Include="CStateParked.cs" />
+    <Compile Include="CStatePreview.cs" />
+    <Compile Include="CStateRinging.cs" />
+    <Compile Include="CStateWaiting.cs" />
+    <Compile Include="CStateWrap.cs" />
+    <Compile Include="CSupervisors.cs" />
+    <Compile Include="CUnfocusedCallStateChangeArgs.cs" />
+    <Compile Include="CUnfocusedStateChangeArgs.cs" />
+    <Compile Include="CUser.cs" />
+    <Compile Include="DialMaskBits.cs" />
+    <Compile Include="DialType.cs" />
+    <Compile Include="ErrorHandler.cs" />
+    <Compile Include="ErrorId.cs" />
+    <Compile Include="EventArrivalHandler.cs" />
+    <Compile Include="ExternalRouteType.cs" />
+    <Compile Include="IEventHandler.cs" />
+    <Compile Include="LogFile.cs" />
+    <Compile Include="LoggedInHandler.cs" />
+    <Compile Include="LogoutPendingHandler.cs" />
+    <Compile Include="PasscodeHandler.cs" />
+    <Compile Include="PhoneStatusHandler.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ScreenpopHandler.cs" />
+    <Compile Include="ServiceType.cs" />
+    <Compile Include="SmartConfiguration.cs" />
+    <Compile Include="StateChangeHandler.cs" />
+    <Compile Include="StatusReasonType.cs" />
+    <Compile Include="TransferType.cs" />
+    <Compile Include="UnfocusedCallStateChangeHandler.cs" />
+    <Compile Include="UnfocusedStateChangeHandler.cs" />
+    <Compile Include="Utilities\DNSUtility.cs" />
+    <Compile Include="Utilities\ProcessChecker.cs" />
+    <Compile Include="Utilities\ValidateUI.cs" />
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

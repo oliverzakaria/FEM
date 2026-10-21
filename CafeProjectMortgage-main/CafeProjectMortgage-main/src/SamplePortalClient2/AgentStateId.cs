@@ -1,0 +1,31 @@
+﻿// Decompiled with JetBrains decompiler
+// Type: SamplePortalClient.AgentStateId
+// Assembly: SamplePortalClient, Version=1.0.9337.19967, Culture=neutral, PublicKeyToken=null
+// MVID: 1D923F2E-5C60-41E8-9709-AD761823608D
+// Assembly location: C:\data\SamplePortalClient.dll
+
+namespace SamplePortalClient
+{
+  public enum AgentStateId
+  {
+    asLOGGING_IN,
+    asAUTHENTICATED,
+    asIDLE,
+    asDIALING,
+    asDIALING_CONSULTATION,
+    asRINGING,
+    asINACTIVE,
+    asPREVIEW,
+    asACTIVE,
+    asACTIVE_INTERNAL,
+    asWRAP,
+    asHELD,
+    asWAITING,
+    asLOGGED_OUT,
+    asNOT_READY,
+    asPARKED,
+    asCONSULTING,
+    asCONFERENCE,
+    asCHATTING,
+  }
+}
